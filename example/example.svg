@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="641"
+    height="951"
+    >
+
+<!--
+      **  ..\source\vecCalc.exe **
+
+      input file: example.vecCalc
+
+      margin 110.60
+      minX -60.00 - maxX 470.00 : 530.00
+      minY 0.00 - MaxY 840.00 : 840.00
+
+
+-->
+
+<g
+   transform="translate(115,895)">
+<circle fill="red" cx="0" cy="0" r="4"/><text x="8" y="-8" font-size="18px">O</text>
+<circle fill="red" cx="320" cy="-160" r="4"/><text x="328" y="-168" font-size="18px">A</text>
+<circle fill="red" cx="400" cy="-600" r="4"/><text x="408" y="-608" font-size="18px">B</text>
+<circle fill="red" cx="180" cy="-640" r="4"/><text x="188" y="-648" font-size="18px">C</text>
+<circle fill="red" cx="115" cy="-360" r="4"/><text x="123" y="-368" font-size="18px">D</text>
+<path stroke="blue"  d="M320.00 -160.00 400.00 -600.00"/>
+<path stroke="blue"  d="M400.00 -600.00 180.00 -640.00"/>
+<path stroke="blue"  d="M180.00 -640.00 115.00 -360.00"/>
+<path stroke="blue"  d="M115.00 -360.00 320.00 -160.00"/>
+<path stroke="blue"  d="M320.00 -160.00 180.00 -640.00"/>
+<path stroke="blue"  d="M400.00 -600.00 115.00 -360.00"/>
+<path stroke="blue"  stroke-dasharray="8, 8"  d="M470.00 -360.00 330.00 -840.00"/>
+<path stroke="blue"  stroke-dasharray="8, 8"  d="M157.00 -216.00 17.00 -696.00"/>
+<circle fill="red" cx="290" cy="-620" r="4"/><text x="298" y="-628" font-size="18px">P</text>
+<circle fill="red" cx="147" cy="-500" r="4"/><text x="155" y="-508" font-size="18px">Q</text>
+<circle fill="red" cx="250" cy="-400" r="4"/><text x="258" y="-408" font-size="18px">R</text>
+<path stroke="magenta"  stroke-dasharray="8, 8"  d="M400.00 -600.00 250.00 -400.00"/>
+<path stroke="magenta"  stroke-dasharray="8, 8"  d="M320.00 -160.00 290.00 -620.00"/>
+<path stroke="magenta"  stroke-dasharray="8, 8"  d="M115.00 -360.00 250.00 -400.00"/>
+<path stroke="magenta"  stroke-dasharray="8, 8"  d="M320.00 -160.00 147.50 -500.00"/>
+<circle fill="red" cx="232" cy="-459" r="4"/><text x="240" y="-467" font-size="18px">I</text>
+<circle fill="red" cx="300" cy="-466" r="4"/><text x="308" y="-474" font-size="18px">X</text>
+<circle fill="red" cx="204" cy="-386" r="4"/><text x="212" y="-394" font-size="18px">Y</text>
+<path stroke="magenta"  stroke-dasharray="8, 8"  d="M-60.00 -570.00 420.00 -710.00"/>
+<circle fill="red" cx="372" cy="-696" r="4"/><text x="380" y="-704" font-size="18px">B'</text>
+<circle fill="red" cx="44" cy="-600" r="4"/><text x="52" y="-608" font-size="18px">D'</text>
+</g>
+</svg>

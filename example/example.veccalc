@@ -1,0 +1,46 @@
+// quadrilateral
+pt O 0 0
+
+#svg colG
+pt A 320 160
+pt B 400 600
+pt C 180 640
+pt D 115 360
+
+#svg colB
+line AB A B
+line BC B C
+line CD C D
+line DA D A
+line AC A C
+line BD B D
+
+#svg dashed
+line leftPara para AC B
+#svg nodraw
+line rightPara para AC D
+#svg dashed
+line Dext sli rightPara -100
+
+#svg colR
+pt P bis BC
+pt Q bis D C
+pt R bis A C
+
+#svg colM
+#svg dashed
+line BR B R
+line AP A P
+line DR D R
+line AQ A Q
+
+#svg dashed
+pt I inter AC BD
+pt X inter BR AP
+pt Y inter DR AQ
+
+line perpAC perp AC C
+
+pt B' inter leftPara perpAC
+pt D' inter rightPara perpAC
+

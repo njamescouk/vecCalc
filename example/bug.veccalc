@@ -1,0 +1,31 @@
+pt O 0 0
+
+pt A 100 100
+pt A' 200 200
+pt A" 400 400
+line A_B A A'
+line a-b perp A_B A"
+
+pt P -500 -500
+pt Q -500 500
+pt R 500 500
+pt S 500 -500
+pt Z 750 0
+
+line SZ S Z
+pt SZbis bis SZ
+line PQ P Q
+#svg nodraw
+line QR Q R
+line RS R S
+line SP S P
+line PR P R
+line QS Q S
+#svg dashed
+line SP_produced ext SP 600
+line QR_shifted sli QR -1000 
+line RS_produced ext RS -250
+line PR_produced ext PR -250
+line QS_produced ext QS -250
+//line QS_shifted sli QS 250
+#svg nodraw

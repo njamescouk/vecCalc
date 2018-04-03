@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="2752"
+    height="1652"
+    >
+
+<!--
+      **  ..\source\vecCalc.exe **
+
+      input file: bug.vecCalc
+
+      margin 152.00
+      minX -1500.00 - maxX 1100.00 : 2600.00
+      minY -750.00 - MaxY 750.00 : 1500.00
+
+
+-->
+
+<g
+   transform="translate(1576,826)">
+<circle fill="red" cx="0" cy="0" r="13"/><text x="26" y="-26" font-size="54px">O</text>
+<circle fill="red" cx="100" cy="-100" r="13"/><text x="126" y="-126" font-size="54px">A</text>
+<circle fill="red" cx="200" cy="-200" r="13"/><text x="226" y="-226" font-size="54px">A'</text>
+<circle fill="red" cx="400" cy="-400" r="13"/><text x="426" y="-426" font-size="54px">A"</text>
+<path stroke="black"  d="M100.00 -100.00 200.00 -200.00"/>
+<path stroke="black"  d="M350.00 -450.00 450.00 -350.00"/>
+<circle fill="red" cx="-500" cy="500" r="13"/><text x="-474" y="474" font-size="54px">P</text>
+<circle fill="red" cx="-500" cy="-500" r="13"/><text x="-474" y="-526" font-size="54px">Q</text>
+<circle fill="red" cx="500" cy="-500" r="13"/><text x="526" y="-526" font-size="54px">R</text>
+<circle fill="red" cx="500" cy="500" r="13"/><text x="526" y="474" font-size="54px">S</text>
+<circle fill="red" cx="750" cy="0" r="13"/><text x="776" y="-26" font-size="54px">Z</text>
+<path stroke="black"  d="M500.00 500.00 750.00 -0.00"/>
+<circle fill="red" cx="625" cy="250" r="13"/><text x="651" y="224" font-size="54px">SZbis</text>
+<path stroke="black"  d="M-500.00 500.00 -500.00 -500.00"/>
+<path stroke="black"  stroke-dasharray="8, 8"  d="M-1100.00 500.00 1100.00 500.00"/>
+<path stroke="black"  stroke-dasharray="8, 8"  d="M-1500.00 -500.00 -500.00 -500.00"/>
+<path stroke="black"  stroke-dasharray="8, 8"  d="M500.00 -750.00 500.00 750.00"/>
+<path stroke="black"  stroke-dasharray="8, 8"  d="M-323.22 323.22 323.22 -323.22"/>
+<path stroke="black"  stroke-dasharray="8, 8"  d="M-323.22 -323.22 323.22 323.22"/>
+</g>
+</svg>

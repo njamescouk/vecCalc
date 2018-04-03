@@ -1,0 +1,73 @@
+<!--
+ yOutputMarkup ..\gcc\y.output
+ 2018-04-03 13:27:42
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>..\gcc\y.output</title>
+</head><body>
+<div class="YGrammar">
+
+<!-- YProduction $accept -->
+<div class="YProduction"><span class="lhs" id="yom_$accept_def"><b>$accept</b></span> <span class="YAltRhs">:<br>
+&nbsp; <a href="#yom_definitionList_def">definitionList</a> <span title="terminal">$end</span> </span>
+<br>;</div>
+
+<!-- YProduction definitionList -->
+<div class="YProduction"><span class="lhs" id="yom_definitionList_def"><b>definitionList</b></span> <span class="YAltRhs">:<br>
+&nbsp; <a href="#yom_definition_def">definition</a></span>
+<span class="YAltRhs"><br>| <a href="#yom_definitionList_def">definitionList</a> <a href="#yom_definition_def">definition</a></span>
+<br>;</div>
+
+<!-- YProduction definition -->
+<div class="YProduction"><span class="lhs" id="yom_definition_def"><b>definition</b></span> <span class="YAltRhs">:<br>
+&nbsp; <a href="#yom_pointDefinition_def">pointDefinition</a></span>
+<span class="YAltRhs"><br>| <a href="#yom_lineDefinition_def">lineDefinition</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">SVG_DIRECTIVE</span>  <span title="terminal">SVG_FLAG</span> </span>
+<br>;</div>
+
+<!-- YProduction pointDefinition -->
+<div class="YProduction"><span class="lhs" id="yom_pointDefinition_def"><b>pointDefinition</b></span> <span class="YAltRhs">:<br>
+&nbsp; <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <a href="#yom_xcoord_def">xcoord</a> <a href="#yom_ycoord_def">ycoord</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <span title="terminal">INTERSECT</span>  <a href="#yom_lineRef_def">lineRef</a> <a href="#yom_lineRef_def">lineRef</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <span title="terminal">BISECT</span>  <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <span title="terminal">BISECT</span>  <a href="#yom_lineRef_def">lineRef</a></span>
+<br>;</div>
+
+<!-- YProduction lineDefinition -->
+<div class="YProduction"><span class="lhs" id="yom_lineDefinition_def"><b>lineDefinition</b></span> <span class="YAltRhs">:<br>
+&nbsp; <span title="terminal">LINE</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">LINE</span>  <a href="#yom_name_def">name</a> <span title="terminal">PERPENDICULAR</span>  <a href="#yom_lineRef_def">lineRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">LINE</span>  <a href="#yom_name_def">name</a> <span title="terminal">PARALLEL</span>  <a href="#yom_lineRef_def">lineRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">LINE</span>  <a href="#yom_name_def">name</a> <span title="terminal">EXTEND</span>  <a href="#yom_lineRef_def">lineRef</a> <span title="terminal">INTEGER</span> </span>
+<span class="YAltRhs"><br>| <span title="terminal">LINE</span>  <a href="#yom_name_def">name</a> <span title="terminal">SLIDE</span>  <a href="#yom_lineRef_def">lineRef</a> <span title="terminal">INTEGER</span> </span>
+<span class="YAltRhs"><br>| <span title="terminal">error</span> </span>
+<br>;</div>
+
+<!-- YProduction xcoord -->
+<div class="YProduction"><span class="lhs" id="yom_xcoord_def"><b>xcoord</b></span> <span class="YAltRhs">:<br>
+&nbsp; <span title="terminal">INTEGER</span> </span>
+<br>;</div>
+
+<!-- YProduction ycoord -->
+<div class="YProduction"><span class="lhs" id="yom_ycoord_def"><b>ycoord</b></span> <span class="YAltRhs">:<br>
+&nbsp; <span title="terminal">INTEGER</span> </span>
+<br>;</div>
+
+<!-- YProduction name -->
+<div class="YProduction"><span class="lhs" id="yom_name_def"><b>name</b></span> <span class="YAltRhs">:<br>
+&nbsp; <span title="terminal">ID</span> </span>
+<br>;</div>
+
+<!-- YProduction pointRef -->
+<div class="YProduction"><span class="lhs" id="yom_pointRef_def"><b>pointRef</b></span> <span class="YAltRhs">:<br>
+&nbsp; <span title="terminal">POINT_REF</span> </span>
+<br>;</div>
+
+<!-- YProduction lineRef -->
+<div class="YProduction"><span class="lhs" id="yom_lineRef_def"><b>lineRef</b></span> <span class="YAltRhs">:<br>
+&nbsp; <span title="terminal">LINE_REF</span> </span>
+<br>;</div>
+</div>
+</body></html>
