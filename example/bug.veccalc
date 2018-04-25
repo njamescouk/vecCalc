@@ -1,6 +1,6 @@
 pt O 0 0
 
-pt A 100 100
+pt A 100 1000
 pt A' 200 200
 pt A" 400 400
 line A_B A A'
@@ -11,10 +11,12 @@ pt Q -500 500
 pt R 500 500
 pt S 500 -500
 pt Z 750 0
+line ZS Z S
 
-line SZ S Z
-pt SZbis bis SZ
+pt SZbis bis ZS
 line PQ P Q
+
+
 #svg nodraw
 line QR Q R
 line RS R S
@@ -28,4 +30,8 @@ line RS_produced ext RS -250
 line PR_produced ext PR -250
 line QS_produced ext QS -250
 //line QS_shifted sli QS 250
+ang &#x03B8; Z S Q
+ang a R P Q
+ang b S P Q
+
 #svg nodraw

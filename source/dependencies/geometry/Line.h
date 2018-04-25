@@ -1,4 +1,4 @@
-// Line.h
+﻿// Line.h
 #ifndef have_Line
 #define have_Line
 
@@ -114,6 +114,25 @@ public:
         return deltaY/deltaX;
     }
 
+    std::string gradientString()
+    {
+        double deltaX = m_to.x() - m_from.x();
+        double deltaY = m_to.y() - m_from.y();
+
+        if (fabs(deltaX) < DBL_EPSILON)
+        {
+            if (deltaY > 0)
+                return "vertical";
+
+            return "-vertical";
+        }
+
+        char buf[BUFSIZ];
+        sprintf(buf, "%.2f", deltaY/deltaX);
+
+        return buf;
+    }
+
     /*
         return value of y when x = 0
 
@@ -125,6 +144,18 @@ public:
         double res = m_to.y() - (gradient() * m_to.x());
 
         return res;
+    }
+
+    std::string interceptString()
+    {
+        double d = intercept();
+        if (fabs(d) > DBL_MAX)
+            return "undefined";
+
+        char buf[BUFSIZ];
+        sprintf(buf, "%.2f", d);
+
+        return buf;
     }
 
     PosVector bisect()
@@ -165,7 +196,24 @@ public:
 
         if (fabs(thisGrad - lGrad) < DBL_EPSILON)
         {
+            /* parallel lines meet at infinity */
             return PosVector(DBL_MAX, DBL_MAX);
+        }
+
+        if (fabs(thisGrad) > 1e9)
+        {
+            /* *this is vertical so eqn of *this is x=xInter */
+            double xInter = m_from.x(); // or m_to.x() should be the same
+            PosVector a = l.suchThatXequals(xInter);
+            return a;
+        }
+
+        if (fabs(lGrad) > 1e9)
+        {
+            /* l is vertical so eqn of l is x=xInter */
+            double xInter = l.getFrom().x(); // or m_to.x() should be the same
+            PosVector a = suchThatXequals(xInter);
+            return a;
         }
 
         double thisIntercept = intercept();
@@ -212,7 +260,7 @@ public:
     Line parallel(PosVector p)
     {
         PosVector pvBis = bisect();
-        PosVector delta = p - pvBis; // operator- iffy?
+        PosVector delta = pvBis - p; // operator- iffy?
 
         Line res = translate(-delta.x(), -delta.y());
 
@@ -288,8 +336,62 @@ public:
     std::string toString()
     {
         std::string res = m_from.toString() + "," + m_to.toString();
-        
+        char buf[BUFSIZ];
+        sprintf(buf, 
+                ", length: %.2f, m: %s, c: %s", 
+                length(), 
+                gradientString().c_str(), 
+                interceptString().c_str());
+        res += buf;
+
         return res;
+    }
+
+    /*
+        return unit vector in direction of *this
+    */
+    PosVector pvHat()
+    {
+        if (m_to == m_from)
+            return PosVector(0,0);
+
+        PosVector res = m_to - m_from;
+        double modThis = _hypot(res.x(), res.y());
+        res = res / modThis;
+
+        return res;
+    }
+
+    /* return point on *this with x coordinate == x */
+    PosVector suchThatXequals(double x)
+    {
+        PosVector res(x, funcOfLine(x));
+
+        return res;
+    }
+
+    /* return f(x) */
+    double funcOfLine(double x)
+    {
+        double c = m_from.y() - gradient()*m_from.x();
+        double res = gradient() * x + c;
+
+        return res;
+    }
+
+    /* 
+    return angle initialLine m_from m_to 
+    
+                      + m_to
+                   ◿
+                ◿
+             ◿     theta
+    m_from +-------------------- initial line
+    */
+    double angle()
+    {
+        PosVector pvLine = m_to - m_from;
+        return pvLine.angle();
     }
 };
 

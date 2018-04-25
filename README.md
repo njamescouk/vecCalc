@@ -17,7 +17,3 @@ text specification. This means the figures are easily and accurately
 editable and reproducible.
 
 Enjoy! 
-
-
-
-Documentation at https://njamescouk.github.io/vecCalc/

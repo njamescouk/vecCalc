@@ -6,27 +6,27 @@
 #include "vecCalcGlobals.h" 
 #include "Line.h"
 #include "DefinitionList.h"
+#include "VecCalcSchedule.h"
 
 #pragma warning( disable : 4996 )
  
 void version(FILE *fp);
 
+//-o I:\usr\NIK\DOM\hobbies\MATHS\intersectLine\intersect.svg I:\usr\NIK\DOM\hobbies\MATHS\intersectLine\intersect.veccalc
+
 int main (int argc, char *argv[])
 {
     progname = argv[0];
-    std::map<std::string, OptionSpec> specs;
+    CmdLineSpec specs;
 
     specs["h"] = OptionSpec(false, "this help");
     specs["v"] = OptionSpec(false, "version");
     specs["d"] = OptionSpec(false, "dump coordinates");
     specs["svg"] = OptionSpec(false, "(default)write svg paths and circles");
     specs["o"] = OptionSpec(true, "output filename");
-    CmdLineSpec cls(specs);
 
     pcldebug = 0;
-    CmdLineParser clp(argc, argv, cls);
-    // char *fake[] = {progname};
-    // CmdLineParser clp(1, fake, cls);
+    CmdLineParser clp(argc, argv, specs);
     Cmdline cmdline = clp.parse();
     if (!cmdline.isValid())
     {
@@ -42,7 +42,7 @@ int main (int argc, char *argv[])
         blurb += " options filename\nreads filename\n"
                  "or stdin and prints values of points\n"
                  "defined in the input\n";
-        cls.help(blurb, stdout);
+        specs.help(blurb, stdout);
         return 0;
     }
 
@@ -52,24 +52,16 @@ int main (int argc, char *argv[])
         return 0;
     }
 
+    bool writeSvg = true;
+
     if (cmdline.hasOption("svg"))
     {
-        gWriteSvg = true;
+        writeSvg = true;
     }
 
     if (cmdline.hasOption("d"))
     {
-        gWriteSvg = false;
-    }
-
-    if (cmdline.hasOption("o"))
-    {
-        ofp = fopen(cmdline.getOptionValue("o").c_str(), "wt");
-        if (ofp == 0)
-        {
-            perror (progname);
-            return 1;
-        }
+        writeSvg = false;
     }
 
     std::string inputFile = "stdin";
@@ -84,11 +76,24 @@ int main (int argc, char *argv[])
         }
     }
  
+    bool ofpFailed = false;
     yyin = ifp;
     yydebug = 1;
     if (yyparse() == 0)
     {
-        gResult.write(ofp, inputFile);
+        /* don't trash the output file if parsing fails */
+        if (cmdline.hasOption("o"))
+        {
+            ofp = fopen(cmdline.getOptionValue("o").c_str(), "wt");
+            if (ofp == 0)
+            {
+                perror (progname);
+                ofpFailed = true;
+            }
+        }
+
+        if (!ofpFailed)
+            gSchedule.write(ofp, inputFile, writeSvg);
     }
     else
     {
@@ -98,7 +103,7 @@ int main (int argc, char *argv[])
     if (ifp != stdin)
         fclose(ifp);
  
-    if (ofp != stdout)
+    if (!ofpFailed && ofp != stdout)
         fclose(ofp);
  
     return 0;

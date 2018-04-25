@@ -22,8 +22,8 @@ class PointDefinition
 {
     POINTDEFINITION_TYPE m_type;
     Name m_name;
-    long m_xcoord;
-    long m_ycoord;
+    double m_xcoord;
+    double m_ycoord;
     LineRef m_lineRef;
     LineRef m_lineRef1;
     long m_number;
@@ -37,7 +37,7 @@ class PointDefinition
 
 public:
     PointDefinition();
-    PointDefinition(Name n, long x, long y);
+    PointDefinition(Name n, double x, double y);
     PointDefinition(Name n, LineRef l1, LineRef l2);
     PointDefinition(Name n, PointRef p, PointRef p2);
     PointDefinition(Name n, LineRef l);
@@ -54,12 +54,12 @@ public:
         return m_name;
     }
 
-    long x()
+    double x()
     {
         return m_xcoord;
     }
 
-    long y()
+    double y()
     {
         return m_ycoord;
     }
@@ -83,7 +83,7 @@ public:
     {
         return m_pointRef1;
     }
-
+    /*
     void print(FILE *fp)
     {
         fprintf (fp, 
@@ -97,7 +97,7 @@ public:
                     -m_ycoord - 2*gSvgPointRadius,
                     gSvgFontSize,
                     m_name.c_str());
-    }
+    }*/
 };
 
 

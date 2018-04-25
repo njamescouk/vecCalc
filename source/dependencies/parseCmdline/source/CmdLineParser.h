@@ -48,7 +48,7 @@ public:
         // pcldebug = 1;
         // -bbbb -x -c 8uggg 222 iuoiuoiu-66
         pclScanString(m_scanString.c_str());
-        cmdlineLexingSpecs = m_spec.getSpecs();
+        cmdlineLexingSpecs = m_spec;
         if (pclparse() == 0)
         {
             res = gPclResult;

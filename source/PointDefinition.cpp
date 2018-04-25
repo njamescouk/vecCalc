@@ -5,7 +5,7 @@ PointDefinition::PointDefinition()
 {
 }
 
-PointDefinition::PointDefinition(Name n, long x, long y)
+PointDefinition::PointDefinition(Name n, double x, double y)
     : m_type(POINTDEFINITION_TYPE_POINT)
     , m_name(n)
     , m_xcoord(x)

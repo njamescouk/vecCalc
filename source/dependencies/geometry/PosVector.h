@@ -1,4 +1,4 @@
-// PosVector.h
+﻿// PosVector.h
 #ifndef have_PosVector
 #define have_PosVector
 
@@ -7,6 +7,8 @@
 #include <cfloat>
 #include <string>
 #include <cstdio>
+
+#define PI       3.14159265358979323846
 
 class PosVector
 {
@@ -75,7 +77,12 @@ public:
 
     PosVector operator- (PosVector p)
     {
-        return PosVector(p.x() - m_x, p.y() - m_y);
+        return PosVector(m_x - p.x(), m_y - p.y());
+    }
+
+    double mod()
+    {
+        return _hypot(m_x, m_y);
     }
 
     PosVector translate(double x, double y)
@@ -90,13 +97,50 @@ public:
         double deltaX = m_x - p.x();
         double deltaY = m_y - p.y();
 
-        return sqrt(pow(deltaX, 2) + pow(deltaY, 2));
+        return _hypot(deltaX, deltaY);
+    }
+
+    /* 
+        return angle to initialLine 
+
+                      + (m_x, m_y)
+                   ◿
+                ◿
+             ◿     theta
+         O +-------------------- initial line
+    */
+    double angle()
+    {
+        double res = 0;
+
+        int quad = quadrantOf();
+
+        double xHat = m_x/mod();
+        double yHat = m_y/mod();
+
+        switch(quad)
+        {
+            case 1:
+                res = asin(yHat);
+                break;
+            case 2:
+                res = acos(xHat);
+                break;
+            case 3:
+                res = 2*PI - acos(xHat);
+                break;
+            case 4:
+                res = 2*PI + asin(yHat);
+                break;
+        }
+
+        return res;
     }
 
     /* return PosVector of a place half way towards p */
     PosVector bisect(PosVector p)
     {
-        PosVector halfPos = (p - *this);
+        PosVector halfPos = (*this - p);
         halfPos = halfPos*.5;
         PosVector res(p + halfPos);
 
@@ -149,6 +193,23 @@ public:
             minX = m_x;
         if (m_y < minY)
             minY = m_y;
+    }
+
+    int quadrantOf()
+    {
+        if (m_y >= 0 && m_x >= 0)
+            return 1;
+
+        if (m_y >= 0 && m_x < 0)
+            return 2;
+
+        if (m_y < 0 && m_x < 0)
+            return 3;
+
+        if (m_y < 0 && m_x >= 0)
+            return 4;
+
+        return 42;
     }
 };
 

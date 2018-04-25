@@ -1,17 +1,19 @@
 // quadrilateral
 pt O 0 0
 
-#svg colG
-pt A 320 160
+var Ay 160
+
+pt A 320 Ay
 pt B 400 600
 pt C 180 640
 pt D 115 360
 
-#svg colB
+#svg colK
 line AB A B
 line BC B C
 line CD C D
 line DA D A
+#svg colB
 line AC A C
 line BD B D
 
@@ -22,7 +24,6 @@ line rightPara para AC D
 #svg dashed
 line Dext sli rightPara -100
 
-#svg colR
 pt P bis BC
 pt Q bis D C
 pt R bis A C
@@ -44,3 +45,5 @@ line perpAC perp AC C
 pt B' inter leftPara perpAC
 pt D' inter rightPara perpAC
 
+#svg solid
+ang &#952; D I A

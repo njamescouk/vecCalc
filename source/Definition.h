@@ -4,14 +4,23 @@
 
 #include "LineDefinition.h"
 #include "PointDefinition.h"
-#include "vecCalcGlobals.h"
+#include "CircleDefinition.h"
+#include "AngleDefinition.h"
+#include "VarDefinition.h"
+#include "SvgFlagState.h"
+
+#pragma warning( disable : 4996 )
 
 enum DEFINITION_TYPE
 {
     DEFINITION_TYPE_NONE = 0,
     DEFINITION_TYPE_LINEDEFINITION,
     DEFINITION_TYPE_POINTDEFINITION,
+    DEFINITION_TYPE_CIRCLEDEFINITION,
+    DEFINITION_TYPE_ANGLEDEFINITION,
+    DEFINITION_TYPE_VARDEFINITION,
     DEFINITION_TYPE_SVGFLAG,
+    DEFINITION_TYPE_INCDIR,
 };
 
 class Definition
@@ -19,13 +28,20 @@ class Definition
     DEFINITION_TYPE m_type;
     PointDefinition m_pointDefinition;
     LineDefinition m_lineDefinition;
+    AngleDefinition m_angleDefintion;
+    VarDefinition m_varDefinition;
+    CircleDefinition m_circleDefinition;
     SVG_FLAGS m_flag;
+    std::string m_include;
 
 public:
     Definition();
-    Definition(Name n);
+    Definition(DEFINITION_TYPE type, Name n);
     Definition(PointDefinition pd);
     Definition(LineDefinition pd);
+    Definition(CircleDefinition cd);
+    Definition(AngleDefinition ad);
+    Definition(VarDefinition vd);
     virtual ~Definition();
     
     DEFINITION_TYPE getType()
@@ -39,6 +55,12 @@ public:
             return m_pointDefinition.getName();
         else if (m_type == DEFINITION_TYPE_LINEDEFINITION)
             return m_lineDefinition.getName();
+        else if (m_type == DEFINITION_TYPE_CIRCLEDEFINITION)
+            return m_circleDefinition.getName();
+        else if (m_type == DEFINITION_TYPE_ANGLEDEFINITION)
+            return m_angleDefintion.getName();
+        else if (m_type == DEFINITION_TYPE_VARDEFINITION)
+            return m_varDefinition.getName();
 
         return std::string();
     }
@@ -58,6 +80,11 @@ public:
         return m_flag;
     }
 
+    std::string getInclude()
+    {
+        return m_include;
+    }
+
     std::string getFlagName()
     {
         switch (m_flag)
@@ -70,26 +97,50 @@ public:
             return "nodraw";
         case SVG_FLAG_SOLID:
             return "solid";
-        case SVG_COLOUR_R:
+        case SVG_FLAG_COLOUR_R:
             return "colR";
-        case SVG_COLOUR_G:
+        case SVG_FLAG_COLOUR_G:
             return "colG";
-        case SVG_COLOUR_B:
+        case SVG_FLAG_COLOUR_B:
             return "colB";
-        case SVG_COLOUR_C:
+        case SVG_FLAG_COLOUR_C:
             return "colC";
-        case SVG_COLOUR_M:
+        case SVG_FLAG_COLOUR_M:
             return "colM";
-        case SVG_COLOUR_Y:
+        case SVG_FLAG_COLOUR_Y:
             return "colY";
-        case SVG_COLOUR_K:
+        case SVG_FLAG_COLOUR_K:
             return "colK";
-        case SVG_COLOUR_W:
+        case SVG_FLAG_COLOUR_W:
             return "colW";
         }
 
         return "none";
     }
+
+    void writeInclude(FILE *ofp)
+    {
+        FILE *ifp = fopen(m_include.c_str(), "rt");
+        {
+            if (ifp == 0)
+            {
+                std::string msg = "Cannot include " + m_include;
+                perror(msg.c_str());
+                return;
+            }
+        }
+
+        int c = 0;
+        while (!feof(ifp) && !ferror(ifp))
+        {
+            c = fgetc(ifp);
+            if (c != EOF)
+                fputc(c, ofp);
+        }
+
+        fclose(ifp);
+    }
+
 };
 
 

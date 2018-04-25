@@ -8,10 +8,8 @@
 #include "OptionSpec.h"
 #include "split_string.h"
 
-class CmdLineSpec
+class CmdLineSpec : public std::map<std::string, OptionSpec>
 {
-    std::map<std::string, OptionSpec> m_specs;
-
 public:
     CmdLineSpec()
     {
@@ -19,7 +17,7 @@ public:
 
     CmdLineSpec(std::map<std::string, OptionSpec> specs)
     {
-        m_specs.insert(specs.begin(), specs.end());
+        insert(specs.begin(), specs.end());
     }
 
     virtual ~CmdLineSpec()
@@ -28,7 +26,7 @@ public:
 
     bool hasFlag(char *flag)
     {
-        if(m_specs.find(flag) != m_specs.end())
+        if(find(flag) != end())
         {
             return true;
         }
@@ -36,14 +34,10 @@ public:
         return false;
     }
 
-    std::map<std::string, OptionSpec> getSpecs()
-    {       
-        return m_specs;
-    }
     OptionSpec getSpec(std::string name)
     {
-        std::map<std::string, OptionSpec>::iterator it = m_specs.find(name);
-        if(it != m_specs.end())
+        std::map<std::string, OptionSpec>::iterator it = find(name);
+        if(it != end())
         {
             return it->second;
         }
@@ -55,7 +49,7 @@ public:
     {
         fprintf(fp, "usage: %s\noptions are:\n", blurb.c_str());
         std::map<std::string, OptionSpec>::iterator it;
-        for (it = m_specs.begin(); it != m_specs.end(); it++)
+        for (it = begin(); it != end(); it++)
         {
             std::string opt = it->first;
             OptionSpec osCur = it->second;
