@@ -76,39 +76,43 @@ typedef union
 #define YYERRCODE 256
 short yylhs[] = {                                        -1,
     0,    0,    1,    1,    1,    1,    1,    1,    1,    2,
-    2,    2,    2,    2,    2,    2,    2,    2,    3,    3,
-    3,    3,    3,    4,    4,    4,    4,    4,    5,    8,
-    6,    6,    7,    7,    9,   10,   11,
+    2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
+    3,    3,    3,    3,    3,    4,    4,    4,    4,    4,
+    4,    5,    8,    6,    6,    7,    7,    9,   10,   11,
+   12,
 };
 short yylen[] = {                                         2,
     1,    2,    1,    1,    1,    1,    1,    2,    2,    4,
-    5,    5,    4,    5,    5,    5,    5,    5,    4,    5,
-    5,    5,    5,    5,    4,    4,    6,    6,    5,    3,
-    1,    1,    1,    1,    1,    1,    1,
+    5,    5,    5,    4,    5,    5,    5,    5,    5,    5,
+    4,    5,    5,    5,    5,    5,    4,    4,    6,    6,
+    6,    5,    3,    1,    1,    1,    1,    1,    1,    1,
+    1,
 };
 short yydefred[] = {                                      0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    1,
-    3,    4,    6,    5,    7,   35,    0,    0,    0,    0,
-    0,    0,    8,    9,    2,   36,    0,    0,    0,    0,
-    0,   31,   32,    0,    0,    0,    0,    0,    0,    0,
-   30,   37,    0,    0,    0,    0,   19,    0,    0,   13,
-   33,   34,   10,    0,    0,    0,    0,    0,   25,    0,
-    0,    0,   22,   23,   21,   20,   11,   12,   17,   16,
-   14,   15,   18,   24,    0,    0,   29,   28,   27,
+    3,    4,    6,    5,    7,   38,    0,    0,    0,    0,
+    0,    0,    8,    9,    2,   39,    0,    0,    0,    0,
+    0,   34,   35,    0,    0,    0,    0,    0,    0,    0,
+   33,   40,    0,    0,    0,    0,   21,   41,    0,    0,
+    0,   14,   36,   37,   10,    0,    0,    0,    0,    0,
+    0,   27,    0,    0,    0,    0,   24,   25,   23,   22,
+   12,   20,   13,   18,   17,   15,   16,   19,   11,   26,
+    0,    0,    0,   32,   30,   29,   31,
 };
 short yydgoto[] = {                                       9,
-   10,   11,   12,   13,   14,   36,   53,   15,   17,   31,
-   43,
+   10,   11,   12,   13,   14,   36,   55,   15,   17,   31,
+   43,   50,
 };
-short yysindex[] = {                                   -222,
- -257, -257, -257, -257, -257, -257, -274, -271, -222,    0,
-    0,    0,    0,    0,    0,    0, -202, -206, -253, -248,
- -253, -242,    0,    0,    0,    0, -240, -240, -240, -240,
- -253,    0,    0, -240, -199, -249, -254, -226, -253, -253,
-    0,    0, -224, -220, -253, -253,    0, -240, -253,    0,
-    0,    0,    0, -219, -215, -253, -253, -253,    0, -253,
- -184, -253,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0, -191, -253,    0,    0,    0,
+short yysindex[] = {                                   -218,
+ -257, -257, -257, -257, -257, -257, -262, -213, -218,    0,
+    0,    0,    0,    0,    0,    0, -205, -225, -202, -202,
+ -202, -193,    0,    0,    0,    0, -187, -187, -187, -187,
+ -202,    0,    0, -252, -215, -249, -254, -227, -221, -202,
+    0,    0, -184, -182, -202, -202,    0,    0, -187, -185,
+ -202,    0,    0,    0,    0, -180, -179, -202, -202, -202,
+ -178,    0, -202, -186, -177, -202,    0,    0,    0,    0,
+    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
+ -176, -202, -175,    0,    0,    0,    0,
 };
 short yyrindex[] = {                                      0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
@@ -116,24 +120,26 @@ short yyrindex[] = {                                      0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    1,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,
+    0,    0,    1,    0,    0,    0,    0,    0,    0,    0,
+    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
+    0,    0,    0,    0,    0,    0,    0,
 };
 short yygindex[] = {                                      0,
-   27,    0,    0,    0,    0,    0,    0,    0,   67,  -16,
-  -17,
+   75,    0,    0,    0,    0,    0,    0,    0,   65,  -16,
+  -17,   35,
 };
 #define YYTABLESIZE 277
 short yytable[] = {                                      16,
-   26,   37,   38,   23,   40,   24,   26,   26,   51,   39,
-   44,   45,   46,   52,   47,   41,   48,   50,   49,   42,
-   58,   60,   61,   62,   54,   55,   56,   57,   65,   66,
-   67,   59,   68,   63,   26,   25,    1,   64,   69,   71,
-   72,   73,   70,   74,   76,   77,    2,    3,    4,    5,
-    6,   32,    7,    8,   26,    0,   33,   34,   26,   79,
-   42,   26,   27,   28,   29,   30,   78,   35,   18,   19,
-   20,   21,   22,   75,    0,    0,   26,    0,    0,    0,
+   28,   37,   38,   39,   40,   42,   26,   42,   53,   48,
+   44,   45,   46,   54,   47,   23,   49,   52,   51,   61,
+   60,   63,   65,   66,   56,   57,   58,   59,   69,   70,
+   62,   71,   32,   26,   73,   26,   64,   33,   34,   26,
+    1,   76,   77,   78,   42,   26,   80,   82,   35,   84,
+    2,    3,    4,    5,    6,   26,    7,    8,   26,   27,
+   28,   29,   30,   24,   41,   86,   18,   19,   20,   21,
+   22,   81,   42,   67,   26,   68,   48,   74,   75,   79,
+   83,   85,   87,   25,   72,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
@@ -150,21 +156,20 @@ short yytable[] = {                                      16,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
     0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,   26,
-    0,    0,    0,    0,    0,    0,    0,    0,    0,   26,
-   26,   26,   26,   26,    0,   26,   26,
+    0,    0,    0,    0,    0,    0,    0,    0,    0,   28,
+    0,    0,    0,    0,    0,    0,    0,    0,    0,   28,
+   28,   28,   28,   28,    0,   28,   28,
 };
 short yycheck[] = {                                     257,
-    0,   18,   19,  278,   21,  277,  261,  261,  258,  258,
-   28,   29,   30,  263,   31,  258,   34,   35,   35,  260,
+    0,   18,   19,   20,   21,  260,  261,  260,  258,  262,
+   28,   29,   30,  263,   31,  278,   34,   35,   35,   37,
    37,   38,   39,   40,  279,  280,  281,  282,   45,   46,
-   48,  258,   49,  258,  261,    9,  259,  258,  258,   56,
-   57,   58,  258,   60,   61,   62,  269,  270,  271,  272,
-  273,  258,  275,  276,  261,   -1,  263,  264,  261,   76,
-  260,  261,  265,  266,  267,  268,  258,  274,    2,    3,
-    4,    5,    6,  258,   -1,   -1,  261,   -1,   -1,   -1,
-   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
+  258,   49,  258,  261,   51,  261,  258,  263,  264,  261,
+  259,   58,   59,   60,  260,  261,   63,   64,  274,   66,
+  269,  270,  271,  272,  273,  261,  275,  276,  261,  265,
+  266,  267,  268,  277,  258,   82,    2,    3,    4,    5,
+    6,  258,  260,  258,  261,  258,  262,  258,  258,  258,
+  258,  258,  258,    9,   50,   -1,   -1,   -1,   -1,   -1,
    -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
    -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
    -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1,
@@ -216,6 +221,7 @@ char *yyrule[] = {
 "definition : SVG_DIRECTIVE SVG_FLAG",
 "definition : INC_DIRECTIVE FILENAME",
 "pointDefinition : POINT name xcoord ycoord",
+"pointDefinition : POINT name pointRef lineRef INTEGER",
 "pointDefinition : POINT name INTERSECT lineRef lineRef",
 "pointDefinition : POINT name BISECT pointRef pointRef",
 "pointDefinition : POINT name BISECT lineRef",
@@ -224,6 +230,7 @@ char *yyrule[] = {
 "pointDefinition : POINT name pointRef MULTIPLY INTEGER",
 "pointDefinition : POINT name pointRef DIVIDE INTEGER",
 "pointDefinition : POINT name pointRef pointRef pointRef",
+"pointDefinition : POINT name INTERSECT circleRef circleRef",
 "lineDefinition : LINE name pointRef pointRef",
 "lineDefinition : LINE name PERPENDICULAR lineRef pointRef",
 "lineDefinition : LINE name PARALLEL lineRef pointRef",
@@ -232,8 +239,9 @@ char *yyrule[] = {
 "circleDefinition : CIRCLE name pointRef pointRef pointRef",
 "circleDefinition : CIRCLE name pointRef INTEGER",
 "circleDefinition : CIRCLE name pointRef pointRef",
-"circleDefinition : ARC name INTEGER pointRef pointRef pointRef",
-"circleDefinition : ARC name INTEGER pointRef INTEGER INTEGER",
+"circleDefinition : ARC name pointRef INTEGER pointRef pointRef",
+"circleDefinition : ARC name pointRef INTEGER INTEGER INTEGER",
+"circleDefinition : ARC name pointRef pointRef INTEGER INTEGER",
 "angleDefinition : ANGLE name pointRef pointRef pointRef",
 "varDefinition : VAR name INTEGER",
 "xcoord : INTEGER",
@@ -243,6 +251,7 @@ char *yyrule[] = {
 "name : ID",
 "pointRef : POINT_REF",
 "lineRef : LINE_REF",
+"circleRef : CIRCLE_REF",
 };
 #endif
 #ifdef YYSTACKSIZE
@@ -521,6 +530,36 @@ case 10:
 break;
 case 11:
 {
+        /* pt INTEGER away from pointRef in direction of lineRef */
+        /* pointDefinition : POINT name pointRef lineRef INTEGER */
+        if (yyvsp[-3].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0 && yyvsp[-1].LineRefPtr != 0)
+        {
+            if (!(gSchedule.isPointInTable(*yyvsp[-2].PointRefPtr) && gSchedule.isLineInTable(*yyvsp[-1].LineRefPtr)))
+            {
+                fprintf(stderr, "line %d invalid point- or lineRef\n", yylineno);
+                fprintf(stderr, "either %s or %s or both\n", yyvsp[-2].PointRefPtr->c_str(), yyvsp[-1].LineRefPtr->c_str());
+                yynerrs++;
+                return 1;
+            }
+
+            Line l = gSchedule.getLine(*yyvsp[-1].LineRefPtr);
+            double deltaX = 0;
+            double deltaY = 0;
+            l.delta(yyvsp[0].longInt, deltaX, deltaY);
+            PosVector src = gSchedule.getPoint(*yyvsp[-2].PointRefPtr);
+            double x = src.x() + deltaX;
+            double y = src.y() + deltaY;
+
+            yyval.PointDefinitionPtr = new PointDefinition(*yyvsp[-3].NamePtr, x, y);
+            gSchedule.installPoint(*yyvsp[-3].NamePtr, PosVector(x,y));
+            delete yyvsp[-3].NamePtr;
+            delete yyvsp[-2].PointRefPtr;
+            delete yyvsp[-1].LineRefPtr;
+        }
+    }
+break;
+case 12:
+{
         /* pointDefinition : POINT name INTERSECT lineRef lineRef */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-1].LineRefPtr != 0 && yyvsp[0].LineRefPtr != 0)
         {
@@ -544,7 +583,7 @@ case 11:
         }
     }
 break;
-case 12:
+case 13:
 {
         /* pointDefinition : POINT name BISECT pointRef pointRef */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-1].PointRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
@@ -570,7 +609,7 @@ case 12:
         }
     }
 break;
-case 13:
+case 14:
 {
         /* pointDefinition : POINT lineRef */
         if (yyvsp[-2].NamePtr != 0 && yyvsp[0].LineRefPtr != 0)
@@ -594,7 +633,7 @@ case 13:
         }
     }
 break;
-case 14:
+case 15:
 {
         /* pointDefinition : POINT name pointRef ADD pointRef */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
@@ -620,7 +659,7 @@ case 14:
         }
     }
 break;
-case 15:
+case 16:
 {
         /* pointDefinition : POINT name pointRef SUBTRACT pointRef */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
@@ -646,7 +685,7 @@ case 15:
         }
     }
 break;
-case 16:
+case 17:
 {
         /* pointDefinition : POINT name pointRef MULTIPLY INTEGER */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0)
@@ -670,7 +709,7 @@ case 16:
         }
     }
 break;
-case 17:
+case 18:
 {
         /* pointDefinition : POINT name pointRef DIVIDE INTEGER */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0)
@@ -694,7 +733,7 @@ case 17:
         }
     }
 break;
-case 18:
+case 19:
 {
         /* pointDefinition : POINT name pointRef pointRef pointRef */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0 && yyvsp[-1].PointRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
@@ -725,7 +764,52 @@ case 18:
         }
     }
 break;
-case 19:
+case 20:
+{
+        /* pointDefinition : POINT name INTERSECT circleRef circleRef */
+        if (yyvsp[-3].NamePtr != 0 && yyvsp[-1].CircleRefPtr != 0 && yyvsp[0].CircleRefPtr != 0)
+        {
+            if (!(gSchedule.isCircleInTable(*yyvsp[-1].CircleRefPtr) && gSchedule.isCircleInTable(*yyvsp[0].CircleRefPtr)))
+            {
+                fprintf(stderr, "line %d invalid circleRef ", yylineno);
+                fprintf(stderr, "either %s or %s or both\n", yyvsp[-1].CircleRefPtr->c_str(), yyvsp[0].CircleRefPtr->c_str());
+                yynerrs++;
+                return 1;
+            }
+
+            Circle c1 = gSchedule.getCircle(*yyvsp[-1].CircleRefPtr);
+            Circle c2 = gSchedule.getCircle(*yyvsp[0].CircleRefPtr);
+
+            if (!(c1.isArc() && c2.isArc()))
+            {
+                fprintf(stderr, "line %d ", yylineno);
+                fprintf(stderr, "either %s or %s or both aren't arcs\n", yyvsp[-1].CircleRefPtr->c_str(), yyvsp[0].CircleRefPtr->c_str());
+                yynerrs++;
+                return 1;
+            }
+
+            PosVector pv;
+            if (c1.intersect(c2, pv))
+            {
+                gSchedule.installPoint(*yyvsp[-3].NamePtr, pv);
+
+                yyval.PointDefinitionPtr = new PointDefinition(*yyvsp[-3].NamePtr, pv.x(), pv.y());
+            }
+            else
+            {
+                fprintf(stderr, "line %d ", yylineno);
+                fprintf(stderr, "can't find intersection between %s and %s\n", yyvsp[-1].CircleRefPtr->c_str(), yyvsp[0].CircleRefPtr->c_str());
+                yynerrs++;
+                return 1;
+            }
+
+            delete yyvsp[-3].NamePtr;
+            delete yyvsp[-1].CircleRefPtr;
+            delete yyvsp[0].CircleRefPtr;
+        }
+    }
+break;
+case 21:
 {
         /* lineDefinition : LINE name pointRef pointRef */
         if (yyvsp[-2].NamePtr != 0 && yyvsp[-1].PointRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
@@ -750,7 +834,7 @@ case 19:
         }
     }
 break;
-case 20:
+case 22:
 {
         /* lineDefinition : LINE name PERPENDICULAR lineRef pointRef */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-1].LineRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
@@ -776,7 +860,7 @@ case 20:
         }
     }
 break;
-case 21:
+case 23:
 {
         /* lineDefinition : name PARALLEL lineRef pointRef */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-1].LineRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
@@ -802,7 +886,7 @@ case 21:
         }
     }
 break;
-case 22:
+case 24:
 {
         /* LINE name EXTEND lineRef INTEGER */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-1].LineRefPtr != 0)
@@ -826,7 +910,7 @@ case 22:
         }
     }
 break;
-case 23:
+case 25:
 {
         /* LINE name SLIDE lineRef INTEGER */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-1].LineRefPtr != 0)
@@ -850,7 +934,7 @@ case 23:
         }
     }
 break;
-case 24:
+case 26:
 {
         /* circleDefinition : CIRCLE name pointRef pointRef pointRef */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0 && yyvsp[-1].PointRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
@@ -874,7 +958,7 @@ case 24:
         }
     }
 break;
-case 25:
+case 27:
 {
         /* circleDefinition : CIRCLE name pointRef INTEGER */
         if (yyvsp[-2].NamePtr != 0 && yyvsp[-1].PointRefPtr != 0)
@@ -896,7 +980,7 @@ case 25:
         }
     }
 break;
-case 26:
+case 28:
 {
         /* circleDefinition : CIRCLE name pointRef pointRef */
         if (yyvsp[-2].NamePtr != 0 && yyvsp[-1].PointRefPtr != 0 && yyvsp[-1].PointRefPtr != 0)
@@ -918,39 +1002,40 @@ case 26:
         }
     }
 break;
-case 27:
+case 29:
 {
-        /* circleDefinition : ARC name INTEGER pointRef pointRef pointRef */
-        if (yyvsp[-4].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0 && yyvsp[-1].PointRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
+        /* circleDefinition : ARC name pointRef INTEGER pointRef pointRef */
+        if (yyvsp[-4].NamePtr != 0 && yyvsp[-3].PointRefPtr != 0 && yyvsp[-1].PointRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
         {
-            if (!(gSchedule.isPointInTable(*yyvsp[-2].PointRefPtr) && gSchedule.isPointInTable(*yyvsp[-1].PointRefPtr) && gSchedule.isPointInTable(*yyvsp[0].PointRefPtr)))
+            if (!(gSchedule.isPointInTable(*yyvsp[-3].PointRefPtr) && gSchedule.isPointInTable(*yyvsp[-1].PointRefPtr) && gSchedule.isPointInTable(*yyvsp[0].PointRefPtr)))
             {
                 fprintf(stderr, "line %d invalid pointRef\n", yylineno);
-                fprintf(stderr, "either %s, %s or %s or any combination\n", yyvsp[-2].PointRefPtr->c_str(), yyvsp[-1].PointRefPtr->c_str(), yyvsp[0].PointRefPtr->c_str());
+                fprintf(stderr, "either %s, %s or %s or any combination\n", yyvsp[-3].PointRefPtr->c_str(), yyvsp[-1].PointRefPtr->c_str(), yyvsp[0].PointRefPtr->c_str());
                 yynerrs++;
                 return 1;
             }
 
-            yyval.CircleDefinitionPtr = new CircleDefinition(*yyvsp[-4].NamePtr, yyvsp[-3].longInt, *yyvsp[-2].PointRefPtr, *yyvsp[-1].PointRefPtr, *yyvsp[0].PointRefPtr);
+            yyval.CircleDefinitionPtr = new CircleDefinition(*yyvsp[-4].NamePtr, *yyvsp[-3].PointRefPtr, yyvsp[-2].longInt, *yyvsp[-1].PointRefPtr, *yyvsp[0].PointRefPtr);
 
-            Circle c(yyvsp[-3].longInt, gSchedule.getPoint(*yyvsp[-2].PointRefPtr), gSchedule.getPoint(*yyvsp[-1].PointRefPtr), gSchedule.getPoint(*yyvsp[0].PointRefPtr));
+            Circle c(gSchedule.getPoint(*yyvsp[-3].PointRefPtr), yyvsp[-2].longInt, gSchedule.getPoint(*yyvsp[-1].PointRefPtr), gSchedule.getPoint(*yyvsp[0].PointRefPtr));
             gSchedule.installCircle(*yyvsp[-4].NamePtr, c);
             delete yyvsp[-4].NamePtr;
-            delete yyvsp[-2].PointRefPtr;
+            delete yyvsp[-3].PointRefPtr;
             delete yyvsp[-1].PointRefPtr;
             delete yyvsp[0].PointRefPtr;
         }
     }
 break;
-case 28:
+case 30:
 {
-        /* circleDefinition : ARC name INTEGER pointRef INTEGER INTEGER */
-        if (yyvsp[-4].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0)
+        /* radius centre = pointRef startAng endAng */
+        /* circleDefinition : ARC name pointRef INTEGER INTEGER INTEGER */
+        if (yyvsp[-4].NamePtr != 0 && yyvsp[-3].PointRefPtr != 0)
         {
-            if (!(gSchedule.isPointInTable(*yyvsp[-2].PointRefPtr)))
+            if (!(gSchedule.isPointInTable(*yyvsp[-3].PointRefPtr)))
             {
                 fprintf(stderr, "line %d invalid pointRef ", yylineno);
-                fprintf(stderr, "%s\n", yyvsp[-2].PointRefPtr->c_str());
+                fprintf(stderr, "%s\n", yyvsp[-3].PointRefPtr->c_str());
                 yynerrs++;
                 return 1;
             }
@@ -959,16 +1044,47 @@ case 28:
             double endAngDeg = yyvsp[0].longInt;
             double startAng = startAngDeg*(2*PI)/360;
             double endAng = endAngDeg*(2*PI)/360;
-            yyval.CircleDefinitionPtr = new CircleDefinition(*yyvsp[-4].NamePtr, yyvsp[-3].longInt, *yyvsp[-2].PointRefPtr, startAng, endAng);
+            yyval.CircleDefinitionPtr = new CircleDefinition(*yyvsp[-4].NamePtr, *yyvsp[-3].PointRefPtr, yyvsp[-2].longInt, startAng, endAng);
 
-            Circle c(yyvsp[-3].longInt, gSchedule.getPoint(*yyvsp[-2].PointRefPtr), startAng, endAng);
+            Circle c(gSchedule.getPoint(*yyvsp[-3].PointRefPtr), yyvsp[-2].longInt, startAng, endAng);
             gSchedule.installCircle(*yyvsp[-4].NamePtr, c);
             delete yyvsp[-4].NamePtr;
+            delete yyvsp[-3].PointRefPtr;
+        }
+    }
+break;
+case 31:
+{
+        /* centre pointRef through pointRef startAng endAng */
+        /* circleDefinition : ARC name pointRef pointRef INTEGER INTEGER */
+        if (yyvsp[-4].NamePtr != 0 && yyvsp[-3].PointRefPtr != 0 && yyvsp[-2].PointRefPtr != 0)
+        {
+            if (!(gSchedule.isPointInTable(*yyvsp[-3].PointRefPtr) && gSchedule.isPointInTable(*yyvsp[-2].PointRefPtr)))
+            {
+                fprintf(stderr, "line %d invalid pointRef ", yylineno);
+                fprintf(stderr, "%s or %s or both\n", yyvsp[-3].PointRefPtr->c_str(), yyvsp[-2].PointRefPtr->c_str());
+                yynerrs++;
+                return 1;
+            }
+
+            PosVector centre = gSchedule.getPoint(*yyvsp[-3].PointRefPtr);
+            PosVector pt = gSchedule.getPoint(*yyvsp[-2].PointRefPtr);
+            double radius = centre.distance(pt);
+            double startAngDeg = yyvsp[-1].longInt;
+            double endAngDeg = yyvsp[0].longInt;
+            double startAng = startAngDeg*(2*PI)/360;
+            double endAng = endAngDeg*(2*PI)/360;
+
+            yyval.CircleDefinitionPtr = new CircleDefinition(*yyvsp[-4].NamePtr, *yyvsp[-3].PointRefPtr, radius, startAng, endAng);
+
+            Circle c(centre, radius, startAng, endAng);
+            gSchedule.installCircle(*yyvsp[-4].NamePtr, c);
+            delete yyvsp[-3].PointRefPtr;
             delete yyvsp[-2].PointRefPtr;
         }
     }
 break;
-case 29:
+case 32:
 {
         /* angleDefinition : ANG name pointRef pointRef pointRef */
         if (yyvsp[-3].NamePtr != 0 && yyvsp[-2].PointRefPtr != 0 && yyvsp[-1].PointRefPtr != 0 && yyvsp[0].PointRefPtr != 0)
@@ -992,7 +1108,7 @@ case 29:
         }
     }
 break;
-case 30:
+case 33:
 {
         /* varDefinition : VAR name INTEGER */
         if (yyvsp[-1].NamePtr != 0)
@@ -1004,44 +1120,50 @@ case 30:
         }
     }
 break;
-case 31:
+case 34:
 {
         /* xcoord : INTEGER */
         yyval.realNum = yylval.longInt;
     }
 break;
-case 32:
+case 35:
 {
         yyval.realNum = gSchedule.getVar(*yylval.VarRefPtr);
     }
 break;
-case 33:
+case 36:
 {
         /* ycoord : INTEGER */
         yyval.realNum = yylval.longInt;
     }
 break;
-case 34:
+case 37:
 {
         yyval.realNum = gSchedule.getVar(*yylval.VarRefPtr);
     }
 break;
-case 35:
+case 38:
 {
         /* name : ID */
         yyval.NamePtr = yylval.NamePtr;
     }
 break;
-case 36:
+case 39:
 {
         /* pointRef : ID */
         yyval.PointRefPtr = yylval.PointRefPtr;
     }
 break;
-case 37:
+case 40:
 {
         /*lineRef :  ID */
         yyval.LineRefPtr = yylval.LineRefPtr;
+    }
+break;
+case 41:
+{
+        /*circleRef :  ID */
+        yyval.CircleRefPtr = yylval.CircleRefPtr;
     }
 break;
     }

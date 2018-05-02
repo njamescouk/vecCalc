@@ -12,8 +12,6 @@
  
 void version(FILE *fp);
 
-//-o I:\usr\NIK\DOM\hobbies\MATHS\intersectLine\intersect.svg I:\usr\NIK\DOM\hobbies\MATHS\intersectLine\intersect.veccalc
-
 int main (int argc, char *argv[])
 {
     progname = argv[0];

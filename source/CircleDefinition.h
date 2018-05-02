@@ -55,8 +55,8 @@ public:
     {}
 
     CircleDefinition(std::string name
-                     , double d
                      , std::string ref1
+                     , double d
                      , std::string ref2
                      , std::string ref3)
         :m_type(CIRCLEDEFINITION_ARC_CENTRE_PT_PT) 
@@ -69,8 +69,8 @@ public:
     }
 
     CircleDefinition(std::string name
-                     , double d
                      , std::string ref1
+                     , double d
                      , double startAng
                      , double endAng)
         :m_type(CIRCLEDEFINITION_ARC_CENTRE_ANG_ANG) 

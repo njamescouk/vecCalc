@@ -54,6 +54,11 @@ public:
         return m_x == p.m_x && m_y == p.m_y;
     }
 
+    bool operator!=(PosVector p)
+    {
+        return !(*this == p);
+    }
+
     /* scalar product */
     double operator* (PosVector p)
     {
@@ -143,6 +148,16 @@ public:
         PosVector halfPos = (*this - p);
         halfPos = halfPos*.5;
         PosVector res(p + halfPos);
+
+        return res;
+    }
+
+    /* return *this rotated by a radians */
+    PosVector rotate(double a)
+    {
+        double xR = m_x*cos(a) - m_y*sin(a),
+               yR = m_x*sin(a) + m_y*cos(a);
+        PosVector res(xR, yR);
 
         return res;
     }

@@ -1,6 +1,6 @@
 <!--
  yOutputMarkup ..\gcc\y.output
- 2018-04-25 13:45:24
+ 2018-05-02 14:06:05
 -->
 <!DOCTYPE html>
 <html>
@@ -34,6 +34,7 @@
 <!-- YProduction pointDefinition -->
 <div class="YProduction"><span class="lhs" id="yom_pointDefinition_def"><b>pointDefinition</b></span> <span class="YAltRhs">:<br>
 &nbsp; <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <a href="#yom_xcoord_def">xcoord</a> <a href="#yom_ycoord_def">ycoord</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_lineRef_def">lineRef</a> <span title="terminal">INTEGER</span> </span>
 <span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <span title="terminal">INTERSECT</span>  <a href="#yom_lineRef_def">lineRef</a> <a href="#yom_lineRef_def">lineRef</a></span>
 <span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <span title="terminal">BISECT</span>  <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
 <span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <span title="terminal">BISECT</span>  <a href="#yom_lineRef_def">lineRef</a></span>
@@ -42,6 +43,7 @@
 <span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <span title="terminal">MULTIPLY</span>  <span title="terminal">INTEGER</span> </span>
 <span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <span title="terminal">DIVIDE</span>  <span title="terminal">INTEGER</span> </span>
 <span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">POINT</span>  <a href="#yom_name_def">name</a> <span title="terminal">INTERSECT</span>  <a href="#yom_circleRef_def">circleRef</a> <a href="#yom_circleRef_def">circleRef</a></span>
 <br>;</div>
 
 <!-- YProduction lineDefinition -->
@@ -58,8 +60,9 @@
 &nbsp; <span title="terminal">CIRCLE</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
 <span class="YAltRhs"><br>| <span title="terminal">CIRCLE</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <span title="terminal">INTEGER</span> </span>
 <span class="YAltRhs"><br>| <span title="terminal">CIRCLE</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
-<span class="YAltRhs"><br>| <span title="terminal">ARC</span>  <a href="#yom_name_def">name</a> <span title="terminal">INTEGER</span>  <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
-<span class="YAltRhs"><br>| <span title="terminal">ARC</span>  <a href="#yom_name_def">name</a> <span title="terminal">INTEGER</span>  <a href="#yom_pointRef_def">pointRef</a> <span title="terminal">INTEGER</span>  <span title="terminal">INTEGER</span> </span>
+<span class="YAltRhs"><br>| <span title="terminal">ARC</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <span title="terminal">INTEGER</span>  <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a></span>
+<span class="YAltRhs"><br>| <span title="terminal">ARC</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <span title="terminal">INTEGER</span>  <span title="terminal">INTEGER</span>  <span title="terminal">INTEGER</span> </span>
+<span class="YAltRhs"><br>| <span title="terminal">ARC</span>  <a href="#yom_name_def">name</a> <a href="#yom_pointRef_def">pointRef</a> <a href="#yom_pointRef_def">pointRef</a> <span title="terminal">INTEGER</span>  <span title="terminal">INTEGER</span> </span>
 <br>;</div>
 
 <!-- YProduction angleDefinition -->
@@ -97,6 +100,11 @@
 <!-- YProduction lineRef -->
 <div class="YProduction"><span class="lhs" id="yom_lineRef_def"><b>lineRef</b></span> <span class="YAltRhs">:<br>
 &nbsp; <span title="terminal">LINE_REF</span> </span>
+<br>;</div>
+
+<!-- YProduction circleRef -->
+<div class="YProduction"><span class="lhs" id="yom_circleRef_def"><b>circleRef</b></span> <span class="YAltRhs">:<br>
+&nbsp; <span title="terminal">CIRCLE_REF</span> </span>
 <br>;</div>
 </div>
 </body></html>

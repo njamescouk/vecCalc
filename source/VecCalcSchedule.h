@@ -145,6 +145,7 @@ class VecCalcSchedule : public std::vector<VecCalcScheduleLine>
         m_pointTable.dump(fp);
         m_lineTable.dump(fp);
         m_angleTable.dump(fp);
+        m_circleTable.dump(fp);
    }
 
 public:
@@ -212,6 +213,16 @@ public:
         fprintf(stderr, "no line %s\n", s.c_str()); 
         assert(false);
         return Line();
+    }
+
+    Circle getCircle(std::string s)
+    {
+        if (m_circleTable.find(s) != m_circleTable.end())
+            return m_circleTable.at(s);
+
+        fprintf(stderr, "no line %s\n", s.c_str()); 
+        assert(false);
+        return Circle();
     }
 
     double getVar(std::string s)

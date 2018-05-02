@@ -23,7 +23,7 @@ public:
     
     void dump(FILE *fp)
     {
-        fprintf(fp, "lines:\n");
+        fprintf(fp, "circles:\n");
         iterator it;
         for (it = begin(); it != end(); it++)
         {

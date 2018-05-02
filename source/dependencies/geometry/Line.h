@@ -10,6 +10,49 @@ class Line
     PosVector m_from,
               m_to;
 
+public:
+    Line() {}
+
+    Line(PosVector from, PosVector to)
+        : m_from(from)
+        , m_to(to)
+    {}
+    
+    virtual ~Line(){}
+
+    bool operator==(Line l)
+    {
+        return m_from == l.m_from && m_to == l.m_to;
+    }
+
+    /* scalar product */
+    double operator*(Line l)
+    {
+        PosVector pv1(m_from - m_to);
+        PosVector pv2(l.m_from - l.m_to);
+        return pv1 * pv2;
+    }
+
+    PosVector getFrom()
+    {
+        return m_from;
+    }
+
+    PosVector getTo()
+    {
+        return m_to;
+    }
+
+    double xExtent()
+    {
+        return m_to.x() - m_from.x();
+    }
+
+    double yExtent()
+    {
+        return m_to.y() - m_from.y();
+    }
+
     /* 
         compute deltaX, deltaY such that
         deltaX^2 + deltaY^2 = d^2
@@ -53,49 +96,6 @@ class Line
             deltaX = d * xSF;
             deltaY = d * ySF;
         }
-    }
-
-public:
-    Line() {}
-
-    Line(PosVector from, PosVector to)
-        : m_from(from)
-        , m_to(to)
-    {}
-    
-    virtual ~Line(){}
-
-    bool operator==(Line l)
-    {
-        return m_from == l.m_from && m_to == l.m_to;
-    }
-
-    /* scalar product */
-    double operator*(Line l)
-    {
-        PosVector pv1(m_from - m_to);
-        PosVector pv2(l.m_from - l.m_to);
-        return pv1 * pv2;
-    }
-
-    PosVector getFrom()
-    {
-        return m_from;
-    }
-
-    PosVector getTo()
-    {
-        return m_to;
-    }
-
-    double xExtent()
-    {
-        return m_to.x() - m_from.x();
-    }
-
-    double yExtent()
-    {
-        return m_to.y() - m_from.y();
     }
 
     double gradient()
